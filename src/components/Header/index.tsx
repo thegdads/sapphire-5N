@@ -12,7 +12,7 @@ interface Props {
 const Header: React.FC<Props> = ({ siteTitle }) => (
   <Styled.Header>
     <Styled.Wrapper>
-      <Logo />
+      <Logo siteTitle={siteTitle}/>
       <MainNav />
     </Styled.Wrapper>
   </Styled.Header>

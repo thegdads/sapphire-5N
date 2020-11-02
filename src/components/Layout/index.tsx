@@ -25,12 +25,14 @@ const Layout: React.FC<Props> = ({ children }) => {
     }
   `);
 
+
   return (
     <>
       <GlobalStyles />
       <AnimatePresence exitBeforeEnter>
         <Styled.Layout>
-          <Header siteTitle={data.site.siteMetadata.title} />
+          {/*<Header siteTitle={data.site.siteMetadata.title} />*/}
+          <Header siteTitle="Sapphire 5N" />
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

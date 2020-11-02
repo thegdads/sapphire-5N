@@ -6,7 +6,7 @@ import * as Styled from './styles';
 
 import { ImageSharpFluid } from 'helpers/definitions';
 
-const Logo: React.FC = () => {
+const Logo: React.FC = ({siteTitle}) => {
   const { site, placeholderImage } = useStaticQuery(graphql`
     query {
       site {
@@ -32,7 +32,7 @@ const Logo: React.FC = () => {
       <Styled.Image>
         <Img fluid={logoImage} alt={logoTitle} />
       </Styled.Image>
-      <Styled.Text>{logoTitle}</Styled.Text>
+      <Styled.Text>{siteTitle}</Styled.Text>
     </Styled.Logo>
   );
 };
